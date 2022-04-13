@@ -1,10 +1,12 @@
 from __future__ import annotations
-from dependency_injection import client, service, register_service
+from dependency_injection import client, service, register_service, register_services
 
 
-register_service('api_key', 'ENCRYPTED_VALUE')
-register_service('number_map', {'zero': 0, 'one': 1, 'two': 2, 'three': 3})
-register_service('number_list', ['zero', 'one', 'two', 'three'])
+register_service(api_key='ENCRYPTED_VALUE')
+register_services(
+    number_map={'zero': 0, 'one': 1, 'two': 2, 'three': 3},
+    number_list=['zero', 'one', 'two', 'three']
+)
 
 
 @service

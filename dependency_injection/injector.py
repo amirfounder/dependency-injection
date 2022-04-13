@@ -6,8 +6,14 @@ from dependency_injection.container import Container
 
 class Injector:
 
-    @classmethod
-    def inject_services(cls, klass: Type):
+    @staticmethod
+    def inject_services(klass: Type):
+        """
+        Modifies the class __init__ member to inject services from the container when called.
+        :param klass: Class to modify.
+        :return: Type - Modified class
+        """
+        # noinspection PyTypeChecker
         init = klass.__init__
         init_signature = get_annotations(init, eval_str=True)
 
