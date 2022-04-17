@@ -78,8 +78,13 @@ class MyClient
 from dependency_injection import client, register_services
 
 register_services(
-    api_key='123-456-7890'
+    api_key='123-456-7890',
+    another_api_key='abc-def-ghij'
 )
 ```
+
+## TODO
+
+Allow for sub containers to limit the scope? IE: Global Container, HTTP Container, ETC.
 
 
