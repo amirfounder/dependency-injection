@@ -2,7 +2,7 @@ from typing import Type, Dict, Optional, Any
 import builtins
 
 
-from dependency_injection.container_service import (
+from dependency_injection.container.container_service import (
     RegisteredService,
     RegisteredClassService,
     RegisteredVariableService
