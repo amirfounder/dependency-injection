@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='dependency-injection',
-    version='0.1.2',
+    name='dependency_injection',
+    version='0.1.3',
     packages=find_packages(),
 )
